@@ -42,11 +42,10 @@ public class RegisterTest extends BaseTest {
     }
 
 
-    // Account Control Panel test from here forward.
+    // Account Control Panel test from here forward. # Note: This would go in a different file.
     @Test(dependsOnMethods = "confirmAccountCreation")
     public void accountControlPanel(){
         RegisterPage registerPage = new RegisterPage(getDriver());
-
     }
 
 }
