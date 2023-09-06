@@ -21,7 +21,8 @@ Positive Test Cases:
 
 ### Pending Questions
 
-1. Se puede optimizar mas el codigo? me parece muy largo el file principal.
+1. Se puede optimizar mas el codigo? me parece que lo alargue mucho al [RegisterPage.java](https://github.com/Franky101/opencart_selenium/blob/main/src/main/java/pagesandstuff/RegisterPage.java)
+   
 2. Invente algo para mandarle emails unicos, hay una manera mas simple?
 ---
     // Create email
