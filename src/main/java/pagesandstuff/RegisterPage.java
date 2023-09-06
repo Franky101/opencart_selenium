@@ -35,11 +35,6 @@ public class RegisterPage {
     private By submitBtn = By.xpath("//*[@type='submit']");
 
 
-    // Confirm Account Creation Text
-    private By congratText = By.xpath("//*[contains(text(),'Congratulations! Your new account has been successfully created!')]");
-    // Continue Button
-    private By continueBtn = By.xpath("//button[text()='Continue']");
-
 
     // Account Control Panel Elements: #Note: This should go to a different test and page
     private By myAccountHeader = By.xpath("//h2[text()='My Account']");
@@ -60,10 +55,22 @@ public class RegisterPage {
     }
 
     // Methods
-
     public boolean headerElementVisible() {
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(accountHeader));
         return element.isDisplayed();
+    }
+
+    public void fillRegisterForm(String firstName,
+                                 String lastName,
+                                 String email,
+                                 String phone,
+                                 String pass) {
+        driver.findElement(firstNameField).sendKeys(firstName);
+        driver.findElement(lastNameField).sendKeys(lastName);
+        driver.findElement(emailField).sendKeys(email);
+        driver.findElement(telephoneField).sendKeys(phone);
+        driver.findElement(pswdField).sendKeys(pass);
+        driver.findElement(pswdConfirmField).sendKeys(pass);
     }
     public void firstNameInput(String firstName) {
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameField));
@@ -102,18 +109,6 @@ public class RegisterPage {
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(submitBtn));
         element.click();
     }
-
-    public boolean confirmAccount() {
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(congratText));
-        return element.isDisplayed();
-    }
-    public void continueBtnClick() {
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(continueBtn));
-        element.click();
-    }
-
-
-
 }
 
 

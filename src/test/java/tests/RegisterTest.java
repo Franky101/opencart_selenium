@@ -2,7 +2,9 @@ package tests;
 
 import baseFiles.BaseTest;
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
+import pagesandstuff.ConfirmCreationPage;
 import pagesandstuff.MainPage;
 import pagesandstuff.RegisterPage;
 
@@ -17,6 +19,25 @@ public class RegisterTest extends BaseTest {
         registerPage.headerElementVisible();
     }
 
+
+    @Test(dependsOnMethods = "openRegisterPage")
+    public void registerUser() {
+        String baseEmail = "UserTest";
+        String email = baseEmail + System.currentTimeMillis() + "@gmail.com";
+        RegisterPage registerPage = new RegisterPage(getDriver());
+
+        registerPage.fillRegisterForm(
+                "Test",
+                "User",
+                email,
+                "111-1111",
+                "123456789"
+                );
+        registerPage.newsLetterClick();
+        registerPage.agreeCheckClick();
+        registerPage.SubmitBtnClick();
+    }
+    @Ignore
     @Test(dependsOnMethods = "openRegisterPage")
     public void fillRegisterPage() {
 
@@ -34,18 +55,12 @@ public class RegisterTest extends BaseTest {
         registerPage.agreeCheckClick();
         registerPage.SubmitBtnClick();
     }
-    @Test(dependsOnMethods = "fillRegisterPage")
-    public void confirmAccountCreation() {
-        RegisterPage registerPage = new RegisterPage(getDriver());
-        Assert.assertTrue(registerPage.confirmAccount());
-//        registerPage.continueBtnClick();
+
+    @Test(dependsOnMethods = "registerUser")
+    public void confirmationPageVisible() {
+        ConfirmCreationPage confirmPage = new ConfirmCreationPage(getDriver());
+
+        confirmPage.confirmAccount();
+        confirmPage.continueBtnClick();
     }
-
-
-    // Account Control Panel test from here forward. # Note: This would go in a different file.
-    @Test(dependsOnMethods = "confirmAccountCreation")
-    public void accountControlPanel(){
-        RegisterPage registerPage = new RegisterPage(getDriver());
-    }
-
 }
