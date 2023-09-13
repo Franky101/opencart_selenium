@@ -9,4 +9,5 @@ import io.cucumber.testng.CucumberOptions;
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
 public class CucumberRunner extends AbstractTestNGCucumberTests {
+
 }

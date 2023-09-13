@@ -1,12 +1,11 @@
 package tests;
 
 import baseFiles.BaseTest;
-import org.testng.Assert;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
-import pagesandstuff.ConfirmCreationPage;
-import pagesandstuff.MainPage;
-import pagesandstuff.RegisterPage;
+import opencart.ConfirmCreationPage;
+import opencart.MainPage;
+import opencart.RegisterPage;
 
 public class RegisterTest extends BaseTest {
 

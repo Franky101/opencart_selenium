@@ -13,7 +13,6 @@ Positive Test Cases:
 
 
 
-
 ### Instructions
 
 1. Run testng.xml file from the root folder. Intellij can Run these type of files directly. 

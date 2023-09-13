@@ -1,4 +1,4 @@
-package pagesandstuff;
+package opencart;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

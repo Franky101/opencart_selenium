@@ -1,4 +1,4 @@
-package pagesandstuff;
+package opencart;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -36,5 +36,9 @@ public class MainPage {
         element.click();
         WebElement element2 = wait.until(ExpectedConditions.elementToBeClickable(dropDownOption));
         element2.click();
+    }
+
+    public void openUrl(String url) {
+        this.driver.get();
     }
 }

@@ -3,7 +3,7 @@ package tests;
 import baseFiles.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pagesandstuff.MainPage;
+import opencart.MainPage;
 
 public class MainTest extends BaseTest {
     @Test
