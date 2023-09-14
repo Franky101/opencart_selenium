@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class MainPage {
+public class MainPage extends Page {
 
     // Locators
 
@@ -21,24 +21,24 @@ public class MainPage {
 
     // Constructor
     public MainPage(WebDriver driver) {
+        super(driver);
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     // Methods
     public boolean MyAccountVisible()  {
+        isDisplayed(myAccountBtn);
         WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(myAccountBtn));
         return element.isDisplayed();
     }
 
     public void openRegister() {
-        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(myAccountBtn));
-        element.click();
-        WebElement element2 = wait.until(ExpectedConditions.elementToBeClickable(dropDownOption));
-        element2.click();
+        click(myAccountBtn);
+        click(dropDownOption);
     }
 
-    public void openUrl(String url) {
-        this.driver.get();
+    // New for class 10
+    public void openPage(String url) {
     }
 }
