@@ -45,6 +45,7 @@ public class MainPage extends Page {
     }
 
     // New for class 10
-    public void openPage(String url) {
+    public void openUrl(String url) {
+        driver.get(url);
     }
 }

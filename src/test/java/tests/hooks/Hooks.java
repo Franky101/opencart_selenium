@@ -6,10 +6,7 @@ import io.cucumber.java.Scenario;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.BeforeTest;
-
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -36,7 +33,7 @@ public class Hooks {
         driver = new ChromeDriver(options);
 
         // Open a webpage
-        driver.get("https://opencart.abstracta.us/");
+//        driver.get("https://opencart.abstracta.us/");
 
         properties = new Properties();
         properties.load(
@@ -49,8 +46,8 @@ public class Hooks {
 
     @After
     public void tearDown() {
-        if (this.driver != null) {
-            this.driver.quit();
+        if (driver != null) {
+            driver.quit();
         }
     }
 }
