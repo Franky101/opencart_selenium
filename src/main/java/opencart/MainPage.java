@@ -14,6 +14,7 @@ public class MainPage extends Page {
 
     private By myAccountBtn = By.xpath("//a[@title='My Account']");
     private By dropDownOption = By.xpath("//li/a[text()='Register'][1]");
+    private By loginOption = By.xpath("//li/a[text()='Login']");
 
     // Atributos
     private WebDriver driver;
@@ -36,6 +37,11 @@ public class MainPage extends Page {
     public void openRegister() {
         click(myAccountBtn);
         click(dropDownOption);
+    }
+
+    public void openLogin() {
+        click(myAccountBtn);
+        click(loginOption);
     }
 
     // New for class 10

@@ -5,9 +5,9 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"tests/stepDefinitions","tests/hooks"},
+        glue = {"tests/stepDefinitions", "tests/hooks"},
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
-public class CucumberRunner extends AbstractTestNGCucumberTests {
+public class CucumberRunnerTest extends AbstractTestNGCucumberTests {
 
 }

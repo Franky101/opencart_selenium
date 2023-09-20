@@ -21,13 +21,10 @@ public class LoginDefinitions {
         this.mainPage = new MainPage(Hooks.getDriver());
         this.registerPage =  new RegisterPage(Hooks.getDriver());
 //        this.myAccountPage = new MyAccountPage(Hooks.getDriver());
-
-
-
     }
 
-    @Dado("que el usuario accese a la pagina de login")
-    public void queElUsuarioAcceseaLaPaginaDeLogin() {
+    @Dado("que el usuario accede a la pagina de login")
+    public void queElUsuarioAccedeALaPaginaDeLogin() {
         System.out.println("step DADO");
         mainPage.openPage("https://opencart.abstracta.us/");
         // Tendria que abrir el Login, no el register <<<

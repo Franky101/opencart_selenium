@@ -1,21 +1,30 @@
 package tests;
 
+import baseFiles.BaseTest;
+import opencart.AccountPage;
+import opencart.LoginPage;
 import opencart.MainPage;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginTest {
+import static java.sql.DriverManager.getDriver;
+
+public class LoginTest extends BaseTest {
 
     @Test
     public void loginCorrecto() {
-        MainPage mainPage = new MainPage(getDriver());
+        MainPage mainPage = new MainPage((WebDriver) getDriver());
         LoginPage loginPage = new LoginPage(getDriver());
-        MyAccountPage myAccountPage = new MyAccountPage(getDriver());
+        AccountPage myAccountPage = new AccountPage(getDriver());
 
+        // Steps in mainPage
+        mainPage.openLogin();
 
-        mainPage.accederLogin();
+        // Steps in loginPage
         loginPage.login("becerrafranco1992@gmail.com","123456789");
 
-        Assert.assertTrue(myAccountPage.tituloEsVisible());
+        // Asserts
+        Assert.assertTrue(myAccountPage.titleVisible());
     }
 }

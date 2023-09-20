@@ -18,6 +18,7 @@ public class BaseTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
         options.addArguments("--incognito");
+        options.addArguments("--ignore-certificate-errors");
 
         // Create driver
         this.driver = new ChromeDriver(options);
@@ -33,7 +34,8 @@ public class BaseTest {
     @AfterTest
     public void tearDown() {
         if (this.driver != null) {
-            this.driver.close();
+            this.driver.quit();
         }
+
     }
 }
