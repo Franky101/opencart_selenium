@@ -27,4 +27,21 @@ public class LoginTest extends BaseTest {
         // Asserts
         Assert.assertTrue(myAccountPage.titleVisible());
     }
+
+    @Test
+    public void loginIncorrecto() {
+        MainPage mainPage = new MainPage((WebDriver) getDriver());
+        LoginPage loginPage = new LoginPage(getDriver());
+        AccountPage myAccountPage = new AccountPage(getDriver());
+
+        // Steps in mainPage
+        mainPage.openLogin();
+
+        // Steps in loginPage
+        loginPage.login("aLaGrandeLePuseCuca@gmail.com","Simpsons");
+
+        // Asserts
+        Assert.assertTrue(loginPage.alertVisible());
+    }
+
 }

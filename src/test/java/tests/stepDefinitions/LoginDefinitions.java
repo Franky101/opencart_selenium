@@ -31,4 +31,12 @@ public class LoginDefinitions {
     public void elUsuarioSeEncuentraEnLaPantallaDeSuCuenta() {
         Assert.assertTrue(accountPage.titleVisible());
     }
+    @Cuando("el usuario ingresa email y contraseña invalidas")
+    public void elUsuarioIngresaEmailYContraseñaInvalidas() {
+        loginPage.login("aLaGrandeLePuseCuca@gmail.com","Simpsons");
+    }
+    @Entonces("el usuario tiene visibilidad de alerta")
+    public void elUsuarioTieneVisibilidadDeAlerta() {
+        Assert.assertTrue(loginPage.alertVisible());
+    }
 }
