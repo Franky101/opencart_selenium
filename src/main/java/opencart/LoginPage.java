@@ -10,7 +10,6 @@ public class LoginPage extends Page {
     private By emailField = By.id("input-email");
     private By pswdField = By.id("input-password");
     private By loginBtn = By.xpath("//input[@value='Login']");
-
     private By loginAlert = By.className("alert-danger");
 
     // Constructor

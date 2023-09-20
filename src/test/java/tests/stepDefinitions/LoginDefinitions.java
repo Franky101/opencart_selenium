@@ -42,6 +42,6 @@ public class LoginDefinitions {
 
     @Cuando("el usuario no ingresa email y contraseña")
     public void elUsuarioNoIngresaEmailYContraseña() {
-        loginPage.login(" "," ");
+        loginPage.login("","");
     }
 }

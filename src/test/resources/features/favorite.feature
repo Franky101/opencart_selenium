@@ -2,12 +2,11 @@
 
 Característica: Favoritos
 
-
-#  @critical
-#  Escenario: Login correcto
-#    Dado que el usuario accede a la pagina de login
-#    Y el usuario ingresa email y contraseña validas
-#    Cuando el usuario ingresa a la seccion cameras
-#    Y agregar producto a favoritos con el corazon
-#    Entonces el usuario visualiza nuevo item en su wishlist
-#
+# Practico 11 | ICARO
+  @practico11 @TPfinal
+  Escenario: Agregar favorito
+    Dado que el usuario acceda a su cuenta
+    Y el usuario ingresa su email y contraseña
+    Cuando el usuario ingresa a la seccion cameras
+    Y agregar producto a favoritos con el corazon
+    Entonces el usuario visualiza nuevo item en su wishlist
