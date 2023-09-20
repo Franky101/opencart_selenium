@@ -3,27 +3,24 @@
 ### https://opencart.abstracta.us/ 
 
 ---
-Version: 0.1
+Version: 0.2
 
-Tests only done with TestNG for now.
+- Tests running with Cucumber
+- Pages organized with POM
+- properties: pending
+- maven for dependencies
+- testNG as framework
 
-Positive Test Cases:
-- Test 1: Main Page is Visible
-- Test 2: Registration page works
+### Test Cases:
 
+- Practico 09: test de Login correcto 
+- Practico 10: test de Registro correcto
+- Practico 11: test de Favorito correcto
 
 
 ### Instructions
 
-1. Run testng.xml file from the root folder. Intellij can Run these type of files directly. 
+1. Run CucumberRunnerTest file with Intellij
 
+[//]: # (1. Run testng.xml file from the root folder. Intellij can Run these type of files directly. )
 
-### Pending Questions
-
-1. Se puede optimizar mas el codigo? me parece que lo alargue mucho al [RegisterPage.java](https://github.com/Franky101/opencart_selenium/blob/main/src/main/java/pagesandstuff/RegisterPage.java)
-   
-2. Invente algo para mandarle emails unicos, hay una manera mas simple?
----
-    // Create email
-    String baseEmail = "UserTest";
-    String email = baseEmail + System.currentTimeMillis() + "@gmail.com";

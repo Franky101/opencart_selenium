@@ -14,6 +14,7 @@ public class Hooks {
 //    private static WebDriver driver;
     private static WebDriver driver;
     private static Properties properties;
+
     @Before
     public void setUp(Scenario scenario) throws IOException {
 
