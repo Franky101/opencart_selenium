@@ -39,4 +39,9 @@ public class LoginDefinitions {
     public void elUsuarioTieneVisibilidadDeAlerta() {
         Assert.assertTrue(loginPage.alertVisible());
     }
+
+    @Cuando("el usuario no ingresa email y contraseña")
+    public void elUsuarioNoIngresaEmailYContraseña() {
+        loginPage.login(" "," ");
+    }
 }
