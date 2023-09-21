@@ -16,7 +16,7 @@ Version: 0.2
 - Practico 09: test de Login correcto 
 - Practico 10: test de Registro correcto
 - Practico 11: test de Favorito correcto
-- Practica TP Final: 
+- Practica TP Final: test de agregar producto a carrito correcto
 
 
 ### Instructions
