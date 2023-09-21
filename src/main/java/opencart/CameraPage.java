@@ -14,6 +14,8 @@ public class CameraPage extends Page{
     private By alertSuccess = By.className("alert-success");
     private By wishListBtn = By.id("wishlist-total");
 
+    private By addToCartBtn = By.xpath("//*[@id=\"content\"]/div[2]/div[1]/div/div[2]/div[2]/button[1]/span");
+
     // First Product Locators
 //    private WebElement firstProductName = driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[1]/div/div[2]/div[1]/h4/a"));
 //    public WebElement getFirstProductNameElement() {
@@ -39,6 +41,7 @@ public class CameraPage extends Page{
         return isDisplayed(alertSuccess);
     }
 
-
-
+    public void addFirstProduct() {
+        click(addToCartBtn);
+    }
 }

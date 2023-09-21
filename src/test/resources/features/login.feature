@@ -4,7 +4,7 @@ Característica: Login
 
 # PRACTICO 09 | ICARO
 
-  @practico09 @TPfinal
+  @practico09
   Escenario: Login correcto
     Dado que el usuario accede a la pagina de login
     Cuando el usuario ingresa email y contraseña validas

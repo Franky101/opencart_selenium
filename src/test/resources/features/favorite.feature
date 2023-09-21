@@ -3,7 +3,7 @@
 Característica: Favoritos
 
 # Practico 11 | ICARO
-  @practico11 @TPfinal
+  @practico11
   Escenario: Agregar favorito
     Dado que el usuario acceda a su cuenta
     Y el usuario ingresa su email y contraseña

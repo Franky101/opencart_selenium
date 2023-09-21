@@ -25,7 +25,6 @@ public class ConfirmCreationPage {
     private By congratText = By.xpath("//*[contains(text(),'Congratulations! Your new account has been successfully created!')]");
     // Continue Button
     private By continueBtn = By.xpath("//a[text()='Continue']");
-
     // Methods
 
     public boolean confirmAccount() {

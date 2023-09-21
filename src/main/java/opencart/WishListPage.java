@@ -15,7 +15,7 @@ public class WishListPage extends Page {
     private By wishListTitle = By.xpath("//a[contains(text(),'My Wish List')]");
 
 //    private By favoriteProduct = By.xpath("//a[contains(text(),'" + cameraPage.getFirstProductName() + "')]");
-    private By favoriteProduct = By.xpath("//a[contains(text(),'Canon EOS 5D')]");
+    private By favoriteProduct = By.xpath("//*[@id=\"content\"]/div[1]/table/tbody/tr/td[2]/a");
 
 //    public By FavoriteProductLocator() {
 //        return By.xpath("//a[contains(text(),'" + cameraPage.getFirstProductName() + "')]");

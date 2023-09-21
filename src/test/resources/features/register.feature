@@ -4,7 +4,7 @@ Característica: Register
 
 # PRACTICO 10 | ICARO
 
-  @practico10 @TPfinal
+  @practico10
   Escenario: Register correcto
     Dado que el usuario accede a la pagina de registro
     Cuando el usuario llena el formulario con informacion valida y hace click en submit
